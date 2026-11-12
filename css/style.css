@@ -1,0 +1,117 @@
+/* ---------- Page layout ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #2b2b2b;
+}
+
+/* Header, map and footer stack vertically and fill the window */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: #2e5e3e;          /* forest green */
+  color: #ffffff;
+  padding: 12px 20px;
+}
+
+header h1 {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+}
+
+header p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* The map takes all remaining space between header and footer */
+#map {
+  flex: 1;
+  width: 100%;
+}
+
+footer {
+  background: #f4f1ea;
+  border-top: 1px solid #ddd;
+  padding: 6px 20px;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ---------- Popups ---------- */
+.leaflet-popup-content h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  color: #2e5e3e;
+}
+
+.leaflet-popup-content table {
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.leaflet-popup-content td {
+  padding: 2px 8px 2px 0;
+}
+
+.leaflet-popup-content td:first-child {
+  font-weight: 600;
+  color: #555;
+}
+
+/* ---------- Legend ---------- */
+.legend {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.legend h4 {
+  margin: 0 0 4px;
+  font-size: 0.85rem;
+}
+
+.legend i {
+  display: inline-block;
+  width: 18px;
+  height: 12px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.legend .line {
+  height: 4px;
+}
+
+.legend .dot {
+  width: 12px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+/* Smaller header text on phones */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.15rem;
+  }
+  header p {
+    display: none;
+  }
+}
