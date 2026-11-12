@@ -3,25 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
 
-  <!-- TODO: Add a page title -->
+  <!-- Page title -->
+  <title>California Cities, Rivers &amp; Protected Areas</title>
 
-  <!-- TODO: Add Leaflet CSS -->
-  
-  <!-- TODO: Add Leaflet JavaScript -->
-  
-  <!-- TODO: Add your custom stylesheet -->
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
-  <!-- TODO: Add your JavaScript file -->
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Custom JavaScript (defer = run after the page has loaded) -->
+  <script src="js/map.js" defer></script>
   
 </head>
 <body>
 
-  <!-- TODO: Add a header for your page -->
+  <header>
+    <h1>California Cities, Rivers &amp; Protected Areas</h1>
+  </header>
 
   <!-- TODO: Map container (Leaflet targets this div by ID) -->
-    
+      <div id="map"></div>
   <!-- TODO: Add a footer for your page -->
-  
+   <footer>
+    <p>Data: Natural Earth (public domain) &middot; Basemaps: &copy; OpenStreetMap contributors, Esri &middot; GIST 604B Web Map</p>
+  </footer>
 </body>
 </html>
