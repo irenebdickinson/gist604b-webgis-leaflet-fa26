@@ -13,9 +13,10 @@ const map = L.map("map", {
 });
 
 // ---------- 2. Basemap layers ----------
-const osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+const osm = L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
   maxZoom: 19,
-  attribution: "&copy; OpenStreetMap contributors"
+  subdomains: "abcd",
+  attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
 }).addTo(map); // default basemap
 
 const imagery = L.tileLayer(
@@ -38,7 +39,7 @@ const placesGroup = L.layerGroup().addTo(map);
 // Layer control: switch basemaps and toggle each layer group
 L.control
   .layers(
-    { "OpenStreetMap": osm, "Satellite Imagery": imagery },
+    { "Street Map": osm, "Satellite Imagery": imagery },
     { "Cities": placesGroup, "Rivers": riversGroup, "Protected Areas": protectedGroup },
     { collapsed: false }
   )
